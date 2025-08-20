@@ -1,0 +1,422 @@
+﻿"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+mrn,baseline_demographics,,text,MRN,,,,,,y,,,,,,,
+full_name,baseline_demographics,,text,"Patient Full Name",,,,,,y,,,,,,,
+firstname,baseline_demographics,,text,"Patient First name",,,,,,y,,,,,,,
+lastname,baseline_demographics,,text,"Patient Last Name",,,,,,y,,,,,,,
+institute,baseline_demographics,,dropdown,Institute,"1, GUH: MedStar Georgetown University Hospital | 2, WHC: MedStar Washington Hospital Center | 3, FSH: MedStar Franklin Square Hospital | 4, GSH: MedStar Good Samaritan Hospital | 5, UMH: MedStar Union Memorial Hospital | 6, JTCC: John Theurer Cancer Center | 7, PMC : Palisades Medical Center",,,,,,,,,,,,
+mrn_aria,baseline_demographics,,text,"Full MRN",,,,,,y,,,,,,,
+race,baseline_demographics,,radio,Race,"1, White | 2, Black or African America | 3, Asian | 4, Native Hawaiian or Other Pacific Islander | 5, American Indian or Alaska Native | 6, Not Specified/Unknown | 7, Other",,,,,,,,,,,,
+ethnicity,baseline_demographics,,radio,Ethnicity,"1, Hispanic or Latino | 2, Not Hispanic or Latino | 3, Unknown",,,,,,,,,,,,
+gender,baseline_demographics,,radio,Gender,"1, Male | 2, Female | 3, Not Specified",,,,,,,,,,,,
+county,baseline_demographics,,text,County,,,,,,,,,,,,,
+state,baseline_demographics,,text,State,,,,,,,,,,,,,
+dob,baseline_demographics,,text,"Date of Birth",,,date_mdy,,,,,,,,,,
+alive,baseline_demographics,,yesno,"Is the patient alive?",,,,,,,,,,,,,
+dod,baseline_demographics,,text,"Date of Death",,,date_mdy,,,,"[alive] = '0'",,,,,,
+gravida,baseline_demographics,"Pregnancy Hx",text,"Number of times this patient has been pregnant",,gravida,integer,0,,,"[gender] = '2'",,,,,,
+para,baseline_demographics,,text,"Number of times this patient has successfully delivered a live baby",,para,,,,,"[gender] = '2' and [gravida] > 0",,,,,,
+first_birth_age,baseline_demographics,,text,"Age of patient at the time of the birth of her first child
+",,,,,,,"[gender] = '2' and [gravida] > 0 and [para] > 0",,,,,,
+miscarriages,baseline_demographics,,radio,"Number of miscarriages","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 or more | 5, Unknown",,,,,,"[gender] = '2' and [gravida] > 0",,,,,,
+stillbirths,baseline_demographics,,radio,"Number of stillbirths","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 or more | 5, Unknown",,,,,,"[gender] = '2' and [gravida] > 0",,,,,,
+no_abortions,baseline_demographics,,text,"Number of abortions",,,,,,,"[gender] = '2' and [gravida] > 0",,,,,,
+smoking_hist,baseline_demographics,Smoking,radio,"Smoking History","1, Never Smoked | 2, Occasional Smoking | 3, Previously Smoked, but Quit | 4, Active Smoker | 5, Unknown",,,,,,,,,,,,
+packs_per_day,baseline_demographics,,text,"Number of packs smoked per day",,,,,,,"[smoking_hist] = '4' or [smoking_hist] = '2' or [smoking_hist] = '3' or [smoking_hist] = '5'",,,,,,
+smoke_yrs_quit,baseline_demographics,,text,"How many years has it been since patient quit?",,,,,,,"[smoking_hist] = '3' or [smoking_hist] = '5' or [smoking_hist] = '2' or [smoking_hist] = '4'",,,,,,
+height,baseline_demographics,Height,text,Height,,,,,,,,,,,,,
+height_unit,baseline_demographics,,dropdown,"Indicate the unit for height","1, cms | 2, inches",,,,,,,,,,,,
+comorbidities,medical_history,,checkbox,Comorbidities,"1, Anxiety disorder | 2, Asthma | 3, Cerebrovascular accident or transient ischemic attack | 4, Chronic Kidney Disease (Moderate to Severe) | 5, Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma | 6, Chronic Obstructive Pulmonary Disease | 7, Congestive Heart Failure | 26, Connective tissue disease | 8, Deep Vein Thrombosis and Pulmonary Embolism | 25, Dementia | 9, Depression | 10, Diabetes uncomplicated | 30, Diabetes with end-organ damage | 11, GERD | 29, Hemiplegia | 12, Hemodialysis | 13, Hepatitis B | 14, Hepatitis C | 15, HIV | 16, Hyperlipidemia | 17, Hypertension | 32, Leukemia | 28, Liver disease (Mild) | 34, Liver disease (Moderate to Severe) | 31, Localized solid tumor | 33, Lymphoma | 35, Metastatic solid tumor | 18, Musculoskeletal pain | 19, Myocardial Infraction/Coronary Artery Disease | 20, Obesity | 22, Pancreatitis | 27, Peptic ulcer disease | 23, Peripheral neuropathy | 24, Peripheral vascular disease | 21, Other",,,,,,,,,,,,
+other_comorb,medical_history,,text,"If other, specify the comorbidity",,,,,,,"[comorbidities(21)] = '1'",,,,,,
+diag_date_other,medical_history,,text,"Diagnosis date of other comorbidity",,,date_mdy,,,,"[comorbidities(21)] = '1'",,,,,,
+diag_date_anx,medical_history,,text,"Diagnosis date of anxiety disorder",,,date_mdy,,,,"[comorbidities(1)] = '1'",,,,,,
+diag_date_asthma,medical_history,,text,"Diagnosis date of asthma",,,date_mdy,,,,"[comorbidities(2)] = '1'",,,,,,
+diag_date_cer_acc,medical_history,,text,"Diagnosis Date of Cerebrovascular accident",,,date_mdy,,,,"[comorbidities(3)] = '1'",,,,,,
+diag_date_ckd,medical_history,,text,"Diagnosis Date of Chronic Kidney Disease",,,date_mdy,,,,"[comorbidities(4)] = '1'",,,,,,
+diag_date_cll_ssl,medical_history,,text,"Diagnosis Date of CLL/SLL",,,date_mdy,,,,"[comorbidities(5)] = '1'",,,,,,
+diag_date_copd,medical_history,,text,"Diagnosis Date of COPD",,,date_mdy,,,,"[comorbidities(6)] = '1'",,,,,,
+diag_date_chf,medical_history,,text,"Diagnosis Date of Congestive Heart Failure",,,date_mdy,,,,"[comorbidities(7)] = '1'",,,,,,
+diag_date_ctd,medical_history,,text,"Diagnosis Date of Connective tissue disease",,,date_mdy,,,,"[comorbidities(26)] = '1'",,,,,,
+diag_date_dvt_pe,medical_history,,text,"Diagnosis Date of Deep Vein Thrombosis and Pulmonary Embolism",,,date_mdy,,,,"[comorbidities(8)] = '1'",,,,,,
+diag_date_dementia,medical_history,,text,"Diagnosis Date of Dementia",,,date_mdy,,,,"[comorbidities(25)] = '1'",,,,,,
+diag_date_depression,medical_history,,text,"Diagnosis Date of Depression",,,date_mdy,,,,"[comorbidities(9)] = '1'",,,,,,
+diag_date_diabetes_uncomp,medical_history,,text,"Diagnosis Date of Diabetes uncomplicated",,,date_mdy,,,,"[comorbidities(10)] = '1'",,,,,,
+diag_date_diabetes_damage,medical_history,,text,"Diagnosis Date of Diabetes with end-organ damage",,,date_mdy,,,,"[comorbidities(30)] = '1'",,,,,,
+diag_date_gerd,medical_history,,text,"Diagnosis Date of GERD",,,date_mdy,,,,"[comorbidities(11)] = '1'",,,,,,
+diag_date_hemiplegia,medical_history,,text,"Diagnosis Date of Hemiplegia",,,date_mdy,,,,"[comorbidities(29)] = '1'",,,,,,
+diag_date_hemodialysis,medical_history,,text,"Diagnosis Date of Hemodialysis",,,date_mdy,,,,"[comorbidities(12)] = '1'",,,,,,
+diag_date_hepatitis_b,medical_history,,text,"Diagnosis Date of Hepatitis B",,,date_mdy,,,,"[comorbidities(13)] = '1'",,,,,,
+diag_date_hepatitis_c,medical_history,,text,"Diagnosis Date of Hepatitis C",,,date_mdy,,,,"[comorbidities(14)] = '1'",,,,,,
+diag_date_hiv,medical_history,,text,"Diagnosis Date of HIV",,,date_mdy,,,,"[comorbidities(15)] = '1'",,,,,,
+diag_date_hyperlipidemia,medical_history,,text,"Diagnosis Date of Hyperlipidemia",,,date_mdy,,,,"[comorbidities(16)] = '1'",,,,,,
+diag_date_hypertension,medical_history,,text,"Diagnosis Date of Hypertension",,,date_mdy,,,,"[comorbidities(17)] = '1'",,,,,,
+diag_date_leukemia,medical_history,,text,"Diagnosis Date of Leukemia",,,date_mdy,,,,"[comorbidities(32)] = '1'",,,,,,
+diag_date_liver_mild,medical_history,,text,"Diagnosis Date of Mild Liver Disease",,,date_mdy,,,,"[comorbidities(28)] = '1'",,,,,,
+diag_date_liver_mod_severe,medical_history,,text,"Diagnosis Date of Moderate and Severe Liver Disease",,,date_mdy,,,,"[comorbidities(34)] = '1'",,,,,,
+diag_date_local_sld_tumr,medical_history,,text,"Diagnosis Date of Localized solid tumor",,,date_mdy,,,,"[comorbidities(31)] = '1'",,,,,,
+diag_date_lymphoma,medical_history,,text,"Diagnosis Date of Lymphoma",,,date_mdy,,,,"[comorbidities(33)] = '1'",,,,,,
+diag_date_met_sld_tumr,medical_history,,text,"Diagnosis Date of Metastatic solid tumor",,,date_mdy,,,,"[comorbidities(35)] = '1'",,,,,,
+diag_date_musculosk_pain,medical_history,,text,"Diagnosis Date of Musculoskeletal pain",,,date_mdy,,,,"[comorbidities(18)] = '1'",,,,,,
+diag_date_mi_cad,medical_history,,text,"Diagnosis Date of Myocardial Infraction/Coronary Artery Disease",,,date_mdy,,,,"[comorbidities(19)] = '1'",,,,,,
+diag_date_obesity,medical_history,,text,"Diagnosis Date of Obesity",,,date_mdy,,,,"[comorbidities(20)] = '1'",,,,,,
+diag_date_pancreatitis,medical_history,,text,"Diagnosis Date of Pancreatitis",,,date_mdy,,,,"[comorbidities(22)] = '1'",,,,,,
+diag_date_peptic_ulcer,medical_history,,text,"Diagnosis Date of Peptic ulcer disease",,,date_mdy,,,,"[comorbidities(27)] = '1'",,,,,,
+diag_date_peri_neuropathy,medical_history,,text,"Diagnosis Date of Peripheral Neuropathy",,,date_mdy,,,,"[comorbidities(23)] = '1'",,,,,,
+diag_date_peri_vascular,medical_history,,text,"Diagnosis Date of Peripheral vascular disease",,,date_mdy,,,,"[comorbidities(24)] = '1'",,,,,,
+aid_hx,medical_history,"Autoimmune Disease",yesno,"Does this patient have a history of autoimmune disease?
+
+",,,,,,,,,,,,,
+aid_type,medical_history,,checkbox,"Which autoimmune condition does this patient have?","1, Addison's disease | 2, Alopecia Areata | 3, Ankylosing spondylitis | 4, Antiphospholipid | 5, Autoimmune hemolytic anemia | 6, Autoimmune hepatitis | 7, Autoimmune NOS | 8, Celiac Disease | 9, Crohn Disease | 10, Dermatopolymyositis | 11, Exczema | 12, Giant-cell arteritis | 13, Guillain - Barre syndrome | 14, Hashimoto disease | 15, Hypothyroidism | 16, Hyperthyroidism | 17, Idiopathic thrombocytopenic purpura | 18, Iridocyclitis | 19, Meniere disease | 20, Multiple sclerosis | 21, Myasthenia gravis | 22, Pernicious anemia | 23, Pemphigus | 24, Polyarteritis nodosa | 25, Polymyalgia rheumatica | 26, Primary biliary cirrhosis | 27, Psoriasis | 28, Pyoderma gangrenosum | 29, Rheumatoid arthritis | 30, Sarcoidosis | 31, Scleroderma | 32, Sicca sundrome | 33, Sweet syndrome | 34, Sjogren syndrome | 35, Systemic lupus erythematosus | 36, Systemic sclerosis | 37, Thyrotoxicosis | 38, Type 1 diabetes mellitus | 39, Ulcerative colitis | 40, Vitiligo | 41, Wegener granulomatosis | 42, Cannot be assessed",,,,,,"[aid_hx] = '1'",,,,,,
+aid_active,medical_history,,yesno,"Is this patients autoimmune disease active?",,,,,,,"[aid_hx] = '1'",,,,,," @HIDDEN"
+aid_steroids,medical_history,,yesno,"If active, does this patient currently take steroids?",,,,,,,"[aid_hx] = '1'",,,,,," @HIDDEN"
+aid_steroid_dose,medical_history,,text,"Dose of steroids",,"mg daily ",,,,,"[aid_steroids] = '1'",,,,,," @HIDDEN"
+aid_othertherapy,medical_history,,text,"Mention Other therapies ",,,,,,,,,,,,," @HIDDEN"
+hiv_currenttx,medical_history,HIV,text,"Current treatment 
+
+",,,,,,,"[comorbidities(15)] = '1'",,,,,," @HIDDEN"
+hiv_prerx,medical_history,,text,"HIV viral load Pre-Rx",,,,,,,"[comorbidities(15)] = '1'",,,,,," @HIDDEN"
+hiv_postrx,medical_history,,text,"HIV viral load Post-Rx",,,,,,,"[comorbidities(15)] = '1'",,,,,," @HIDDEN"
+hive_cd4prerx,medical_history,,text,"CD 4 Count Pre-Rx",,,,,,,"[comorbidities(15)] = '1'",,,,,," @HIDDEN"
+hiv_cd4postrx,medical_history,,text,"CD 4 Count Post-Rx or at progression",,,,,,,"[comorbidities(15)] = '1'",,,,,," @HIDDEN"
+ckd_stage,medical_history,CKD,radio,"CKD Stage","1, II | 2, IIIa | 5, IIIb | 6, IV | 7, V",,,,,,"[comorbidities(4)] = '1'",,,,,," @HIDDEN"
+ckd_hemodialysis,medical_history,,yesno,Hemodialysis,,,,,,,"[comorbidities(4)] = '1'",,,,,," @HIDDEN"
+chf_yesno,medical_history,CHF,radio,CHF,"1, Yes | 2, No",,,,,,,,,,,," @HIDDEN"
+chf_stage,medical_history,,radio,"CHF NYHA Stage","1, I | 2, II | 3, III | 4, IV",,,,,,"[comorbidities(7)] = '1'",,,,,," @HIDDEN"
+chf_ef_prerx,medical_history,,text,"Ejection Fraction at the Pre-Rx ",,,,,,,"[comorbidities(7)] = '1'",,,,,," @HIDDEN"
+chf_ef_postrx,medical_history,,text,"Ejection Fraction at the Post-Rx ",,,,,,,"[comorbidities(7)] = '1'",,,,,," @HIDDEN"
+asth_steroidinhale,medical_history,Asthma,yesno,"On inhaled steroids",,,,,,,"[comorbidities(2)] = '1'",,,,,," @HIDDEN"
+asth_steroidtypeinh,medical_history,,text,"If yes, specify type of steroid",,,,,,,"[asth_steroidinhale] = '1'",,,,,," @HIDDEN"
+asth_steroiddose,medical_history,,text,"Specify the dose of the steroid",,,,,,,"[asth_steroidinhale] = '1'",,,,,," @HIDDEN"
+asth_posteroids,medical_history,,yesno,"Is this patient on PO steroids?",,,,,,,"[comorbidities(2)] = '1'",,,,,," @HIDDEN"
+asth_steroidtypeoral,medical_history,,radio,"If yes, specify type of steroid",,,,,,,,,,,,," @HIDDEN"
+asth_posteroid_dose,medical_history,,text,"Specify dose of PO steroid",,,,,,,"[asth_posteroids] = '1'",,,,,," @HIDDEN"
+copd_steroidinhale,medical_history,COPD,yesno,"Is the patient on inhaled steroids?",,,,,,,"[comorbidities(6)] = '1'",,,,,," @HIDDEN"
+copd_steroidtypeinh,medical_history,,text,"If yes, specify type of inhaled steroid",,,,,,,"[comorbidities(6)] = '1' and [copd_steroidinhale] = '1'",,,,,,
+copd_steroiddose,medical_history,,text,"Specify the dose of the steroid",,,,,,,"[copd_steroidinhale] = '1' and [copd_steroidinhale] = '1'",,,,,," @HIDDEN"
+copd_posteroids,medical_history,,yesno,"Is this patient on PO steroids?",,,,,,,"[comorbidities(6)] = '1'",,,,,," @HIDDEN"
+copd_steroidtypeoral,medical_history,,text,"Specify type of PO steroid",,,,,,,"[comorbidities(6)] = '1' and [copd_posteroids] = '1'",,,,,," @HIDDEN"
+copd_posteroid_dose,medical_history,,text,"Specify dose of PO steroid",,,,,,,"[comorbidities(6)] = '1' and [copd_posteroids] = '1'",,,,,," @HIDDEN"
+num_cancer_fam,medical_history,"Family History",radio,"How many members of  patient's family have a history of cancer?","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 or more | 5, Unk",,,,,,,,,,,,
+fam_hist_mem_rel_1,medical_history,,dropdown,"Family member #1: Relationship","1, Aunt (Paternal) | 2, Aunt (Maternal) | 3, Brother | 4, Cousin | 5, Dad | 6, Daughter | 7, Father | 8, Grandchild | 9, Grandfather (Paternal) | 10, Grandfather (Maternal) | 11, Grandmother (Paternal) | 12, Grandmother (Maternal) | 13, Great-grandparents | 14, Half-brother | 22, Twin-brother | 15, Mother | 16, Nephew | 17, Other | 18, Niece | 19, Sister | 20, Son | 21, Twin | 23, Twin-sister | 24, Uncle (Paternal) | 25, Uncle (Maternal)",,autocomplete,,,,"[num_cancer_fam] = '1' OR [num_cancer_fam] = '2' OR [num_cancer_fam] = '3' OR [num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_cancer_1,medical_history,,dropdown,"Family member #1: Cancer history","1, Acute myeloid leukemia | 2, Acute lymphoblastic leukemia | 3, Anal Carcinoma | 4, Bladder Cancer | 5, Bone Cancer | 6, Brain Cancer | 7, Breast Cancer | 8, Central Nervous system tumors | 9, Cervical Cancer | 10, Chronic Lymphocytic Leukemia/Small lymphocytic lymphoma | 11, Chronic Myeloid Leukemia | 12, GI Cancers | 13, Head and Neck tumors | 14, Hodgkin Lymphoma | 15, Kidney Cancer | 16, Lung Cancer | 17, Lymphoma, other | 18, Melanoma | 19, Myelodysplastic Syndrome | 20, Myleproliferative Neoplasms | 21, Neuroendocrine Tumors | 22, Non-Hodgkin's Lymphomas | 23, Non-Melanoma Skin Cancer | 24, Ovarian Cancer | 25, Penile Cancer | 26, Prostate Cancer | 27, Soft tissue Sarcoma | 28, Systemic Light chain Amyloidosis | 29, T cell Lymphomas | 30, Testicular Cancer | 31, Thymomas and thymic cancer | 32, Thyroid Cancer | 33, Uterine Neoplasms | 34, Vaginal Cancer | 35, Vulvar Cancer | 36, Waldenstrom's Macroglobulinemia/ Lymphoplamacytic Lymphoma | 38, Multiple Primary | 37, Other",,autocomplete,,,,"[num_cancer_fam] = '1' OR [num_cancer_fam] = '2' OR [num_cancer_fam] = '3' OR [num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_cancerothr_1,medical_history,,text,"Family member #1: Please specify which cancer",,,,,,,"[fam_hist_mem_cancer_1] = '37'",,,,,,
+fam_hist_mem_rel_2,medical_history,,dropdown,"Family member #2: Relationship","1, Aunt (Paternal) | 2, Aunt (Maternal) | 3, Brother | 4, Cousin | 5, Dad | 6, Daughter | 7, Father | 8, Grandchild | 9, Grandfather (Paternal) | 10, Grandfather (Maternal) | 11, Grandmother (Paternal) | 12, Grandmother (Maternal) | 13, Great-grandparents | 14, Half-brother | 22, Twin-brother | 15, Mother | 16, Nephew | 17, Other | 18, Niece | 19, Sister | 20, Son | 21, Twin | 23, Twin-sister | 24, Uncle (Paternal) | 25, Uncle (Maternal)",,autocomplete,,,,"[num_cancer_fam] = '2' OR [num_cancer_fam] = '3' OR [num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_cancerothr_2,medical_history,,text,"Family member #2: Please specify which cancer",,,,,,,"[fam_hist_mem_cancer_2] = '37'",,,,,,
+fam_hist_mem_cancer_2,medical_history,,dropdown,"Family member #2: Cancer history","1, Acute myeloid leukemia | 2, Acute lymphoblastic leukemia | 3, Anal Carcinoma | 4, Bladder Cancer | 5, Bone Cancer | 6, Brain Cancer | 7, Breast Cancer | 8, Central Nervous system tumors | 9, Cervical Cancer | 10, Chronic Lymphocytic Leukemia/Small lymphocytic lymphoma | 11, Chronic Myeloid Leukemia | 12, GI Cancers | 13, Head and Neck tumors | 14, Hodgkin Lymphoma | 15, Kidney Cancer | 16, Lung Cancer | 17, Lymphoma, other | 18, Melanoma | 19, Myelodysplastic Syndrome | 20, Myleproliferative Neoplasms | 21, Neuroendocrine Tumors | 22, Non-Hodgkin's Lymphomas | 23, Non-Melanoma Skin Cancer | 24, Ovarian Cancer | 25, Penile Cancer | 26, Prostate Cancer | 27, Soft tissue Sarcoma | 28, Systemic Light chain Amyloidosis | 29, T cell Lymphomas | 30, Testicular Cancer | 31, Thymomas and thymic cancer | 32, Thyroid Cancer | 33, Uterine Neoplasms | 34, Vaginal Cancer | 35, Vulvar Cancer | 36, Waldenstrom's Macroglobulinemia/ Lymphoplamacytic Lymphoma | 38, Multiple Primary | 37, Other",,autocomplete,,,,"[num_cancer_fam] = '2' OR [num_cancer_fam] = '3' OR [num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_rel_3,medical_history,,dropdown,"Family member #3: Relationship","1, Aunt (Paternal) | 2, Aunt (Maternal) | 3, Brother | 4, Cousin | 5, Dad | 6, Daughter | 7, Father | 8, Grandchild | 9, Grandfather (Paternal) | 10, Grandfather (Maternal) | 11, Grandmother (Paternal) | 12, Grandmother (Maternal) | 13, Great-grandparents | 14, Half-brother | 22, Twin-brother | 15, Mother | 16, Nephew | 17, Other | 18, Niece | 19, Sister | 20, Son | 21, Twin | 23, Twin-sister | 24, Uncle (Paternal) | 25, Uncle (Maternal)",,autocomplete,,,,"[num_cancer_fam] = '3' OR [num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_cancer_3,medical_history,,dropdown,"Family member #3: Cancer history","1, Acute myeloid leukemia | 2, Acute lymphoblastic leukemia | 3, Anal Carcinoma | 4, Bladder Cancer | 5, Bone Cancer | 6, Brain Cancer | 7, Breast Cancer | 8, Central Nervous system tumors | 9, Cervical Cancer | 10, Chronic Lymphocytic Leukemia/Small lymphocytic lymphoma | 11, Chronic Myeloid Leukemia | 12, GI Cancers | 13, Head and Neck tumors | 14, Hodgkin Lymphoma | 15, Kidney Cancer | 16, Lung Cancer | 17, Lymphoma, other | 18, Melanoma | 19, Myelodysplastic Syndrome | 20, Myleproliferative Neoplasms | 21, Neuroendocrine Tumors | 22, Non-Hodgkin's Lymphomas | 23, Non-Melanoma Skin Cancer | 24, Ovarian Cancer | 25, Penile Cancer | 26, Prostate Cancer | 27, Soft tissue Sarcoma | 28, Systemic Light chain Amyloidosis | 29, T cell Lymphomas | 30, Testicular Cancer | 31, Thymomas and thymic cancer | 32, Thyroid Cancer | 33, Uterine Neoplasms | 34, Vaginal Cancer | 35, Vulvar Cancer | 36, Waldenstrom's Macroglobulinemia/ Lymphoplamacytic Lymphoma | 38, Multiple Primary | 37, Other",,autocomplete,,,,"[num_cancer_fam] = '3' OR [num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_cancerothr_3,medical_history,,text,"Family member #3: Please specify which cancer",,,,,,,"[fam_hist_mem_cancer_3] = '37'",,,,,,
+fam_hist_mem_rel_4,medical_history,,dropdown,"Family member #4: Relationship","1, Aunt (Paternal) | 2, Aunt (Maternal) | 3, Brother | 4, Cousin | 5, Dad | 6, Daughter | 7, Father | 8, Grandchild | 9, Grandfather (Paternal) | 10, Grandfather (Maternal) | 11, Grandmother (Paternal) | 12, Grandmother (Maternal) | 13, Great-grandparents | 14, Half-brother | 22, Twin-brother | 15, Mother | 16, Nephew | 17, Other | 18, Niece | 19, Sister | 20, Son | 21, Twin | 23, Twin-sister | 24, Uncle (Paternal) | 25, Uncle (Maternal)",,autocomplete,,,,"[num_cancer_fam] = '4'",,,,,,
+fam_hist_mem_cancerothr_4,medical_history,,text,"Family member #4: Please specify which cancer",,,,,,,"[fam_hist_mem_cancer_4] = '37'",,,,,,
+fam_hist_mem_cancer_4,medical_history,,dropdown,"Family member #4: Cancer history","1, Acute myeloid leukemia | 2, Acute lymphoblastic leukemia | 3, Anal Carcinoma | 4, Bladder Cancer | 5, Bone Cancer | 6, Brain Cancer | 7, Breast Cancer | 8, Central Nervous system tumors | 9, Cervical Cancer | 10, Chronic Lymphocytic Leukemia/Small lymphocytic lymphoma | 11, Chronic Myeloid Leukemia | 12, GI Cancers | 13, Head and Neck tumors | 14, Hodgkin Lymphoma | 15, Kidney Cancer | 16, Lung Cancer | 17, Lymphoma, other | 18, Melanoma | 19, Myelodysplastic Syndrome | 20, Myleproliferative Neoplasms | 21, Neuroendocrine Tumors | 22, Non-Hodgkin's Lymphomas | 23, Non-Melanoma Skin Cancer | 24, Ovarian Cancer | 25, Penile Cancer | 26, Prostate Cancer | 27, Soft tissue Sarcoma | 28, Systemic Light chain Amyloidosis | 29, T cell Lymphomas | 30, Testicular Cancer | 31, Thymomas and thymic cancer | 32, Thyroid Cancer | 33, Uterine Neoplasms | 34, Vaginal Cancer | 35, Vulvar Cancer | 36, Waldenstrom's Macroglobulinemia/ Lymphoplamacytic Lymphoma | 38, Multiple Primary | 37, Other",,autocomplete,,,,"[num_cancer_fam] = '4'",,,,,,
+currentcancer,current_cancer_hx,"Cancer by site",radio,"Current Cancer Diagnosis for which immunotherapy is being used","1, Acute myeloid leukemia | 2, Acute lymphoblastic leukemia | 3, Anal Carcinoma | 4, Bladder Cancer | 5, Bone Cancer | 6, Brain Cancer | 7, Breast Cancer | 8, Central Nervous system tumors | 9, Cervical Cancer | 10, Chronic Lymphocytic Leukemia/Small lymphocytic lymphoma | 11, Chronic Myeloid Leukemia | 12, GI Cancers | 13, Head and Neck tumors | 14, Hodgkin Lymphoma | 15, Kidney Cancer | 16, Lung Cancer | 17, Lymphoma, other | 18, Melanoma | 19, Myelodysplastic Syndrome | 20, Myleproliferative Neoplasms | 21, Neuroendocrine Tumors | 22, Non-Hodgkin's Lymphomas | 23, Non-Melanoma Skin Cancer | 24, Ovarian Cancer | 25, Penile Cancer | 26, Prostate Cancer | 27, Soft tissue Sarcoma | 28, Systemic Light chain Amyloidosis | 29, T cell Lymphomas | 30, Testicular Cancer | 31, Thymomas and thymic cancer | 32, Thyroid Cancer | 33, Uterine Neoplasms | 34, Vaginal Cancer | 35, Vulvar Cancer | 36, Waldenstrom's Macroglobulinemia/ Lymphoplamacytic Lymphoma | 38, Multiple Primary | 37, Other","Latest pirmary cancer in the diagnoses table",,,,,,,,,,,
+multiple_primary,current_cancer_hx,,text,"If multiple, specify which cancers ",,,,,,,"[currentcancer] = '38'",,,,,,
+other_cancer,current_cancer_hx,,text,"If other, specify the current cancer diagnosis",,,,,,,"[currentcancer] = '37'",,,,,,
+aml_subtype,current_cancer_hx,,checkbox,"AML subtype","1, AML with minimal differentiation (M0) | 2, AML without maturation (M1) | 3, AML with maturation (M2) | 4, Acute promyelocytic leukemia leukemia (M3) | 5, Acute myelomonocytic leukemia (M4) | 6, Acute monoblastic and monocytic leukemia (M5) | 7, Pure erythroid leukemia (M6) | 8, Acute megakaryoblastic leukemia (M7) | 9, Other",,,,,,"[currentcancer] = '1'",,,,,,
+hist_all,current_cancer_hx,,checkbox,"Specify the subtype of acute lymphoblastic leukemia ","1, Ph + ALL | 2, PH - ALL | 3, Other",,,,,,"[currentcancer] = '2'",,,,,,
+hist_anal,current_cancer_hx,,checkbox,"Specify the subtype of anal carcinoma 
+","1, Localized | 2, Metastatic | 3, Other",,,,,,"[currentcancer] = '3'",,,,,,
+hist_bladder,current_cancer_hx,,checkbox,"Specify the subtype of bladder cancer 
+
+","1, Non muscle invasive | 2, Muscle invasive | 3, Metastatic | 4, Renal Pelvis | 5, Urothelial Carcinoma of the ureter | 6, Urothelial Carcinoma of the prostate | 7, Primary carcinoma of the Urethra | 8, Other",,,,,,"[currentcancer] = '4'",,,,,,
+hist_bone,current_cancer_hx,,checkbox,"Specify the subtype of bone cancer","1, Chondrosarcoma | 2, Chordoma | 3, Ewing's sarcoma family of tumors | 4, Giant cell tumor of the bone | 5, Osteosarcoma | 6, Other",,,,,,"[currentcancer] = '5'",,,,,,
+hist_breast,current_cancer_hx,,checkbox,"Specify the subtype of breast cancer","1, Invasive  Ductal | 2, Lobular | 3, Mixed | 4, Metaplastic | 5, Mucinous | 6, Tubular | 7, Lobular Carcinoma in situ (LICS) | 8, Ductal Carcinoma in situ (DICS) | 9, Other",,,,,,"[currentcancer] = '7'",,,,,,
+hist_cns,current_cancer_hx,,checkbox,"Specify the subtype of central nervous system tumors ","1, Adult Low-Grade Infiltrative Supratentorial Astrocytoma | 2, Oligodendroglioma (excluding pilocytic astrocytoma) | 3, Anaplastic Gliomas/Glioblastoma | 4, Adult Intracranial Ependymoma | 5, Adult Medulloblastoma | 6, Primary CNS Lymphoma | 7, Primary Spinal Cord Tumors | 8, Meningiomas | 9, Limited (1-3) Brain Metastases | 10, Multiple (>3) Brain Metastases | 11, Leptomeningeal Metastases | 12, Metastatic Spine Tumors | 13, Other",,,,,,"[currentcancer] = '8'",,,,,,
+hist_gi,current_cancer_hx,,checkbox,"Specify the subtype of GI cancer","1, Colon Cancer | 8, Cholangio Carcinoma | 5, Esophageal Cancer | 3, Gastric Cancer | 7, Hepatocellulcar Carcinoma (HCC) | 4, Pancreatic Cancer | 2, Rectal Cancer | 6, Other",,,,,,"[currentcancer] = '12'",,,,,,
+hist_headneck,current_cancer_hx,,checkbox,"Specify the subtype of head and neck tumors ","1, Cancer of the Lip | 2, Cancer of the Oral Cavity | 3, Cancer of the Oropharynx | 4, Cancer of the Hypopharynx | 5, Cancer of the Nasopharynx | 6, Cancer of the Glottic Larynx | 7, Cancer of the Supraglottic Larynx | 8, Ethmoid Sinus Tumors | 9, Maxillary Sinus Tumors | 11, Occult Primary | 12, Salivary Gland Tumors | 13, Other",,,,,,"[currentcancer] = '13'",,,,,,
+hist_hodgkinlymph,current_cancer_hx,,checkbox,"Specify the subtype of hodgkin lymphoma ","1, Classical Hodgkins lymphoma | 2, Nodular lymphocyte predominant Hodgkin lymphoma | 3, Other",,,,,,"[currentcancer] = '14'",,,,,,
+hist_melanoma,current_cancer_hx,,checkbox,"Specify the subtype of melanoma","1, Mucosal | 2, Uveal | 3, Choroidal | 4, Cutaneous | 5, Other",,,,,,"[currentcancer] = '18'",,,,,,
+hist_neuroendo,current_cancer_hx,,checkbox,"Specify the subtype of neuroendocrine tumors","1, Neuroendocrine Tumors of the GI | 2, Neuroendocrine Tumors of the Lung | 3, Neuroendocrine Tumors of the Thymus | 4, Neuroendocrine Tumors of the Pancreas | 5, Neuroendocrine Unknown Primary | 6, Pheochromocytoma | 7, Paraganglioma | 8, neuroendocrine tumors - high grade | 9, neuroendocrine tumors - anaplastic | 10, neuroendocrine tumors - small cell | 11, Multiple Endocrine Neoplasia, Type 1 | 12, Multiple Endocrine Neoplasia, Type 2 | 13, Other",,,,,,"[currentcancer] = '21'",,,,,,
+hist_nonhodgkin,current_cancer_hx,,checkbox,"Specify the subtype of Non-Hodgkin's lymphomas","1, Follicular Lymphoma | 2, Gastric MALT Lymphoma | 3, Nongastric MALT Lymphoma | 4, Nodal Marginal Zone Lymphoma | 5, Splenic Marginal Zone Lymphoma | 6, Mantle Cell Lymphoma | 7, Diffuse Large B-Cell Lymphoma | 8, Burkitt Lymphoma | 9, AIDS-Related B-Cell Lymphomas | 10, Castleman's Disease | 11, Other",,,,,,"[currentcancer] = '22'",,,,,,
+hist_tcell_lymph,current_cancer_hx,,checkbox,"Specify the subtype of T cell lymphomas 
+","1, Peripheral T-Cell Lymphoma, Noncutaneous | 2, Breast Implant-Associated Anaplastic Large Cell Lymphoma (ALCL) | 3, Mycosis Fungoides/SÃ©zary Syndrome | 4, Primary Cutaneous CD30+ T-Cell Lymphoproliferative Disorders | 5, T-cell Large Granular Lymphocytic Leukemia | 6, Adult T-Cell Leukemia | 7, Adult T-Cell Lymphoma | 8, T-Cell Prolymphocytic Leukemia | 9, Extranodal NK/T-Cell Lymphoma, nasal type | 10, Other",,,,,,"[currentcancer] = '29'",,,,,,
+hist_nonmelanoma,current_cancer_hx,,checkbox,"Specify the subtype of non-melanoma skin cancer 
+","1, Basal Cell skin cancer | 2, Dermatofibrosarcoma Protuberans | 3, Merkel Cell Carcinoma | 4, Squamous Cell Skin Cancer | 5, Other",,,,,,"[currentcancer] = '23'",,,,,,
+hist_lung,current_cancer_hx,,checkbox,"Specify the subtype of lung cancer 
+","1, NSCLC adenocarcinoma | 2, NSCLC squamous | 3, NSCLC large cell | 4, SCLC | 5, Neuroendocrine tumors | 6, Other",,,,,,"[currentcancer] = '16'",,,,,,
+lymphoma_other,current_cancer_hx,,text,"Specify Lymphoma, Other",,,,,,,"[currentcancer] = '17'",,,,,,
+hist_softtiss_sarcoma,current_cancer_hx,,checkbox,"Specify the subtype of soft tissue sarcoma 
+","1, Desmoid Tumors | 2, Extremity | 3, Gastrointestinal Stromal Tumors (GIST) | 4, Rhabdomyosarcoma | 5, Retroperitoneal/Intra-Abdominal | 6, Peritoneal | 7, Other",,,,,,"[currentcancer] = '27'",,,,,,
+hist_thyroid,current_cancer_hx,,checkbox,"Specify the subtype of thyroid cancer","2, Papillary Carcinoma | 3, Follicular Carcinoma | 4, HÃ¼rthle Cell Neoplasm | 5, Medullary Carcinoma | 6, Anaplastic Carcinoma | 7, Other",,,,,,"[currentcancer] = '32'",,,,,,
+hist_uterine,current_cancer_hx,,checkbox,"Specify the subtype of uterine neoplasms","1, Endometrial Cancer | 2, Uterine Sarcoma | 3, Other",,,,,,"[currentcancer] = '33'",,,,,,
+other_cancersubtype,current_cancer_hx,,text,"Is other, please specify the cancer subtype",,,,,,,"[aml_subtype(9)] = '1' or [hist_all(3)] = '1' or [hist_anal(3)] = '1' or [hist_bladder(8)] = '1' or [hist_bone(6)] = '1' or [hist_breast(9)] = '1' or [hist_cns(13)] = '1' or [hist_gi(6)] = '1' or [hist_headneck(13)] = '1' or [hist_hodgkinlymph(3)] = '1' or [hist_melanoma(5)] = '1' or [hist_neuroendo(13)] = '1' or [hist_nonhodgkin(11)] = '1' or [hist_tcell_lymph(10)] = '1' or [hist_nonmelanoma(5)] = '1' or [hist_lung(6)] = '1' or [hist_softtiss_sarcoma(7)] = '1' or [hist_thyroid(7)] = '1' or [hist_uterine(3)] = '1'",,,,,,
+stage,current_cancer_hx,,radio,"Cancer stage at which the patient is receiving treatment","1, In situ | 2, I | 3, IA | 4, IB | 5, IC | 6, In Situ and I combined for bladder only | I, NOS | 7, II | 8, IIA | 9, IIB | 10, IIC | II, NOS | 11, III | 12, IIIA | 13, IIIB | 14, IIIC | III, NOS | 15, IV | 16, IVA | 17, IVB | IV, NOS | 18, Incomplete records",,,,,,,,,,,,
+onsetdate,current_cancer_hx,,text,"Onset Date (biopsy date or radiology imaging which lead to treatment decision for I-O therapy)",,,date_mdy,,,,,,,,,,
+onset_cancerreg,current_cancer_hx,,text,"Onset date as per cancer registry",,,date_mdy,,,,,,,,,,
+met_iotx,current_cancer_hx,"Metastases History",yesno,"Was metastatic disease present before IO therapy",,,,,,,,,,,,,
+metastasis,current_cancer_hx,,checkbox,Metastasis,"1, Brain | 2, Liver | 3, Lung | 4, Bone | 5, Peritoneal | 6, Pleural | 7, Lymph nodes | 8, Adrenal | 9, Soft tissue (skin, subcutaneous) | 10, Other Visceral Organs",,,,,,"[met_iotx] = '1'",,,,,,
+other_metastasis,current_cancer_hx,,text,"If other, please specify",,,,,,,"[metastasis(5)] = '1'",,,,,,
+metastatic_sites,current_cancer_hx,,radio,"Total number of metastatic sites","0, 0 | 1, 1 | 2, 2 | 3, 3 or more",,,,,,"[met_iotx] = '1'",,,,,,
+unreseactable_yn,current_cancer_hx,,yesno,"Does the patient have unresectable disease?",,,,,,,"[met_iotx] = '0'",,,,,,
+msi_status,current_cancer_hx,,radio,"MicroSatellite Instability (MSI) status","1, High | 2, Low | 3, Stable | 4, Unknown",,,,,,,,,,,,
+brainmets_baseline_ldh,current_cancer_hx,"Brain Metastases",text,"Baseline LDH",,,,,,,"[metastasis(1)] = '1'",,,,,,
+brainmets_baseline_ldh_uln,current_cancer_hx,,text,"Upper limit of normal (ULN) of LDH",,,,,,,"[metastasis(1)] = '1'",,,,,,
+date_init_brain_met,current_cancer_hx,,text,"Date of initial MRI when brain met was identified",,,date_mdy,,,,"[metastasis(1)] = '1'",,,,,,
+date_brain_before_io,current_cancer_hx,,text,"Date of MRI brain",,"right before current I-O therapy",date_mdy,,,,"[metastasis(1)] = '1'",,,,,,
+num_brain_mets_beg_io,current_cancer_hx,,text,"Total number of brain metastasis at the beginning of the I-O therapy (both treated and untreated)
+",,,,,,,"[metastasis(1)] = '1'",,,,,,
+brain_mets_location,current_cancer_hx,,checkbox,Location,"1, Cortex | 2, Cerebellum | 3, Brain stem | 4, Spinal cord","at the beginning of I-O therapy",,,,,"[metastasis(1)] = '1'",,,,,,
+brain_mets_treated_before,current_cancer_hx,,yesno,"Was any brain metastasis treated before beginning of I-O therapy?",,,,,,,"[metastasis(1)] = '1'",,,,,,
+num_brain_mets_before_io,current_cancer_hx,,dropdown,"Number of brain mets treated before I-O therapy","1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 or more",,,,,,"[metastasis(1)] = '1' and [brain_mets_treated_before] = '1'",,,,,,
+type_tx_brain_mets,current_cancer_hx,,checkbox,"Type of treatments of brain mets","1, RT - whole brain radiation | 2, RT -cyber knife; or RT steriostatic | 3, Surgery | 4, Surgery and RT",,,,,,"[metastasis(1)] = '1' and [brain_mets_treated_before] = '1'",,,,,,
+date_brain_tx_rt_wbr,current_cancer_hx,,text,"Date of whole brain radiation",,"before current I-O therapy",date_mdy,,,,"[brain_mets_treated_before] = '1' and [type_tx_brain_mets(1)] = '1'",,,,,,
+date_brain_tx_rt_ck,current_cancer_hx,,text,"Date of radiation cyber knife or steriostatic",,"before current I-O therapy",date_mdy,,,,"[brain_mets_treated_before] = '1' and [type_tx_brain_mets(2)] = '1'",,,,,,
+date_brain_tx_surgery,current_cancer_hx,,text,"Date of surgery",,"before current I-O therapy",date_mdy,,,,"[brain_mets_treated_before] = '1' and [type_tx_brain_mets(3)] = '1'",,,,,,
+date_brain_tx_rt_surgery,current_cancer_hx,,text,"Date of surgery and radiation",,"before current I-O therapy",date_mdy,,,,"[brain_mets_treated_before] = '1' and [type_tx_brain_mets(4)] = '1'",,,,,,
+rt_necrosis_yn,current_cancer_hx,,yesno,"Radiation Necrosis",,,,,,,"[metastasis(1)] = '1' and [brain_mets_treated_before] = '1' and ([type_tx_brain_mets(1)] = '1' or [type_tx_brain_mets(2)] = '1' or [type_tx_brain_mets(4)] = '1')",,,,,,
+rt_necrosis_streoids_yn,current_cancer_hx,,yesno,"Were steroids used?",,,,,,,"[rt_necrosis_yn] = '1'",,,,,,
+rt_necrosis_bevacizumab_yn,current_cancer_hx,,yesno,"Was Bevacizumab used?",,,,,,,"[rt_necrosis_yn] = '1'",,,,,,
+untx_brain_mets_yn,current_cancer_hx,,yesno,"Were there any untreated brain mets present at beginning of I-O therapy?",,,,,,,"[metastasis(1)] = '1'",,,,,,
+untx_brain_mets_prg_yn,current_cancer_hx,,yesno,"Did the untreated brain mets progress or new lesions develop (during I-O therapy)?",,,,,,,"[untx_brain_mets_yn] = '1'",,,,,,
+untx_brain_mets_prg_type,current_cancer_hx,,checkbox,"Untreated brain mets progression or new lesions","1, new lesion | 2, increase in size",,,,,,"[untx_brain_mets_prg_yn] = '1'",,,,,,
+untx_brain_mets_status,current_cancer_hx,,radio,"Did the untreated brain mets ....?","1, Resolve | 2, Decrease in size (During I-O therapy) | 3, No change in size",,,,,,"[untx_brain_mets_prg_yn] = '0'",,,,,,
+date_untx_brain_mets_mri,current_cancer_hx,,text,"Date of MRI used to identify untreated brain mets status ",,,date_mdy,,,,"[untx_brain_mets_yn] = '1' or [untx_brain_mets_yn] = '0'",,,,,,
+brainmets_tx_duringio_yn,current_cancer_hx,,yesno,"Was there a new brain mets treated during I-O therapy?",,,,,,,"[metastasis(1)] = '1'",,,,,,
+typtx_brainmets_during_io,current_cancer_hx,,checkbox,"Type of treatments of brain mets","1, RT - whole brain radiation | 2, RT - cyber knife | 3, RT - steriostatic | 4, Surgery | 5, Surgery and RT",,,,,,"[brainmets_tx_duringio_yn] = '1'",,,,,,
+brainmets_tx_duringio_yn_2,current_cancer_hx,,yesno,"Was there an additional brain mets treated during I-O therapy?",,,,,,,"[brainmets_tx_duringio_yn] = '1'",,,,,,
+typtx_brainmets_during_io_2,current_cancer_hx,,checkbox,"Type of treatments of brain mets","1, RT - whole brain radiation | 2, RT - cyber knife | 3, RT - steriostatic | 4, Surgery | 5, Surgery and RT",,,,,,"[brainmets_tx_duringio_yn_2] = '1'",,,,,,
+brainmets_tx_duringio_yn_3,current_cancer_hx,,yesno,"Was there an additional brain mets treated during I-O therapy?",,,,,,,"[brainmets_tx_duringio_yn_2] = '1'",,,,,,
+typtx_brainmets_during_io_3,current_cancer_hx,,checkbox,"Type of treatments of brain mets","1, RT - whole brain radiation | 2, RT - cyber knife | 3, RT - steriostatic | 4, Surgery | 5, Surgery and RT",,,,,,"[brainmets_tx_duringio_yn_3] = '1'",,,,,,
+brainmets_neuro_symptoms,current_cancer_hx,,yesno,"Neuro Symptoms - Headaches, weakness, or paresthesia",,,,,,,"[metastasis(1)] = '1'",,,,,,
+brainmets_new_prg_disc_io,current_cancer_hx,,yesno,"Did the patient develop any new brain mets or his existing brain mets progressed after discontinuing I-O therapy?  ",,,,,,,"[metastasis(1)] = '1'",,,,,,
+date_mri_prg_disc_io,current_cancer_hx,,yesno,"Date MRI suggesting progression or new lesions after discontinuing I-O therapy ",,,,,,,"[brainmets_new_prg_disc_io] = '1'",,,,,,
+mut_egfr,current_cancer_hx,"Patient mutation Status",radio,EGFR,"1, Mutation present | 2, Wild type | 3, Unknown",,,,,,,,,,mutation_status1,,
+mut_alk,current_cancer_hx,,radio,ALK,"1, Mutation present | 2, Wild type | 3, Unknown",,,,,,,,,,mutation_status1,,
+mut_kras,current_cancer_hx,,radio,KRAS,"1, Mutation present | 2, Wild type | 3, Unknown",,,,,,,,,,mutation_status1,,
+mut_braf,current_cancer_hx,,radio,BRAF,"1, Mutation present | 2, Wild type | 3, Unknown",,,,,,,,,,mutation_status1,,
+mut_nras,current_cancer_hx,,radio,NRAS,"1, Mutation present | 2, Wild type | 3, Unknown",,,,,,,,,,mutation_status1,,
+mut_ros,current_cancer_hx,,radio,ROS,"1, Mutation present | 2, Wild type | 3, Unknown",,,,,,,,,,mutation_status1,,
+mut_er,current_cancer_hx,,radio,ER,"1, Positive | 2, Negative | 3, Unknown",,,,,,,,,,mutation_status2,,
+mut_pr,current_cancer_hx,,radio,PR,"1, Positive | 2, Negative | 3, Unknown",,,,,,,,,,mutation_status2,,
+mut_her2,current_cancer_hx,,radio,HER2,"1, Positive | 2, Negative | 3, Unknown",,,,,,,,,,mutation_status2,,
+test_pdl1,current_cancer_hx,,radio,"Was PD-L1 tested in this patient?","1, Yes | 2, No | 3, Unknown",,,,,,,,,,,,
+mut_pdl1,current_cancer_hx,,text,"If tested, report the percent of PD L -1 expression",," (%)",,,,,"[test_pdl1] = '1'",,,,,,
+pdli_test,current_cancer_hx,,radio,"Test used to check PD L -1 expression 
+","1, Ventana SP263 assay | 2, Dako 22C3 assay | 3, Dako 28-8 assay",,,,,,,,,,,," @HIDDEN"
+mut_other,current_cancer_hx,,text,"Other mutations this patient was tested for ",,,,,,,,,,,,,
+caris_nextgenseq,current_cancer_hx,,radio,"Caris next generation sequencing done","1, Yes | 2, No",,,,,,,,,,,,
+prev_cancer_hx,current_cancer_hx,"Cancer History",yesno,"Does this patient have previous history of cancer prior to the current cancer that IO is given for?",,,,,,,,,,,,,
+prev_cancer_hx_type,current_cancer_hx,,checkbox,"Please specify what history of cancer type this patient had","1, Acute myeloid leukemia | 2, Acute lymphoblastic leukemia | 3, Anal Carcinoma | 4, Bladder Cancer | 5, Bone Cancer | 6, Brain Cancer | 7, Breast Cancer | 8, Central Nervous system tumors | 9, Cervical Cancer | 10, Chronic Lymphocytic Leukemia/Small lymphocytic lymphoma | 11, Chronic Myeloid Leukemia | 12, GI Cancers | 13, Head and Neck tumors | 14, Hodgkin Lymphoma | 15, Kidney Cancer | 16, Lung Cancer | 17, Lymphoma, other | 18, Melanoma | 19, Myelodysplastic Syndrome | 20, Myleproliferative Neoplasms | 21, Neuroendocrine Tumors | 22, Non-Hodgkin's Lymphomas | 23, Non-Melanoma Skin Cancer | 24, Ovarian Cancer | 25, Penile Cancer | 26, Prostate Cancer | 27, Soft tissue Sarcoma | 28, Systemic Light chain Amyloidosis | 29, T cell Lymphomas | 30, Testicular Cancer | 31, Thymomas and thymic cancer | 32, Thyroid Cancer | 33, Uterine Neoplasms | 34, Vaginal Cancer | 35, Vulvar Cancer | 36, Waldenstrom's Macroglobulinemia/ Lymphoplamacytic Lymphoma | 38, Multiple Primary | 37, Other",,,,,,"[prev_cancer_hx] = '1'",,,,,,
+prev_cancer_history_other,current_cancer_hx,,text,"Please specify which other cancer",,,,,,,"[prev_cancer_hx] = '1'",,,,,,
+ecog_1stdose,treatment_with_immunotherapy,,radio,"ECOG pre treatment","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5","Right before date of first dose ",,,,,,,,,,,
+ecog_lastdose,treatment_with_immunotherapy,,radio,"ECOG post treatment","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5","Right after the date of last dose or date of last dose of second agent when COMBO",,,,,,,,,,,
+weight,treatment_with_immunotherapy,,text,"Weight before first dose",,,,,,,,,,,,,
+weight_unit,treatment_with_immunotherapy,,dropdown,"Indicate the unit for weight","1, kg | 2, lbs",,,,,,,,,,,,
+pre_bmi,treatment_with_immunotherapy,,text,"Pre treatment BMI",,,,,,,,,,,,,
+pre_bmi_calculated,treatment_with_immunotherapy,,calc,"Pre treatment BMI","if([weight_unit]=1,if([height_unit]=1,[weight]/([height]/100)^(2),[weight]/((([height]/100)/0.39370)^(2))),if([height_unit]=1,([weight]*0.45359237)/(([height]/100)^(2)),([weight]*0.45359237)/((([height]/100)/0.39370)^(2))))",,,,,,,,,,,,
+pre_bsa_calculated,treatment_with_immunotherapy,,calc,"Pre treatment BSA","if([weight_unit]=1,if([height_unit]=1,sqrt((([height])*[weight])/3600),sqrt((([height]/0.39370)*[weight])/3600)),if([height_unit]=1,sqrt((([height])*[weight]*0.45359237)/3600),sqrt((([height]/0.39370)*[weight]*0.45359237)/3600)))",,,,,,,,,,,,
+post_bmi,treatment_with_immunotherapy,,text,"Post treatment BMI",,,,,,,,,,,,,
+current_rx_po_streoids,treatment_with_immunotherapy,,yesno,"Was the patient on steroids at the start of therapy?
+",,"-7 days to + 7 day of IO therapy and systemic steroids include PO prednisone > 10mg or equivalent - dexamethasone, methylprednison or solumedrol",,,,,,,,,,,
+current_rx_po_doses,treatment_with_immunotherapy,,text,"What dose(s) of steroids did they get?",,"doeses separated by (;)",,,,,"[current_rx_po_streoids] = '1'",,,,,,
+prevrx_io_therapy,treatment_with_immunotherapy,,yesno,"Was the patient previously treated with an Immuno-therapy?",,,,,,,,,,,,,
+prev_io_agent,treatment_with_immunotherapy,,radio,"Previous Immuno-therapy initial single or combination therapy","1, Nivolumab | 2, Pembrolizumab | 3, Atezolizumab | 4, Durvamulab | 5, Ipilimumab | 6, Avelumab | 7, IL-2 | 8, Interferon | 9, Nivolumab + Ipilumumab | 10, Pembrolizumab + Ipilimumab | 11, Durvalumab + Tremelimumab | 12, Other",,,,,,"[prevrx_io_therapy] = '1'",,LH,,,,
+prevrx_io_therapynumber,treatment_with_immunotherapy,,radio,"Number of previous Immuno-therapies  before current Immuno-therapy?
+","1, 1 | 2, 2 | 3, 3 | 4, More",,,,,,"[prevrx_io_therapy] = '1'",,,,,,
+io_agent1,treatment_with_immunotherapy,,radio,"Current Immuno-therapy initial single or combination therapy","1, Nivolumab | 2, Pembrolizumab | 3, Atezolizumab | 4, Durvamulab | 5, Ipilimumab | 6, Avelumab | 7, IL-2 | 8, Interferon | 9, Nivolumab + Ipilumumab | 10, Pembrolizumab + Ipilimumab | 11, Durvalumab + Tremelimumab | 13, Carboplatin + Pembrolizumab + Pemetrexet | 14, Carboplatin + Paclitaxel + Pembrolizumab | 15, Pembrolizumab + Axitinib | 12, Other",,,,,,,,LH,,,,
+current_io_line,treatment_with_immunotherapy,,radio,"Which line of therapy is the patient's current immunotherapy?","1, 1 | 2, 2 | 3, 3 | 4, >=4",,,,,,,,,,,,
+first_io_other,treatment_with_immunotherapy,,text,"If other, please specify the drug name",,,,,,,"[io_agent1] = '12'",,,,,,
+io_dose1date,treatment_with_immunotherapy,,text,"Date of 1st dose
+",,,date_mdy,,,,,,,,,,
+io_lastdosedate,treatment_with_immunotherapy,,text,"Date of last dose of combination or initial single agent
+",,,date_mdy,,,,,,,,,,
+numofdoses,treatment_with_immunotherapy,,text,"Number of doses
+",,,number,,,,,,,,,,
+lastdosedate_2nd,treatment_with_immunotherapy,,text,"Date of last dose of 2nd agent (maintenance) if initial treatment with COMBO",,,date_mdy,,,,,,,,,,
+numdoses_2ndagent,treatment_with_immunotherapy,,text,"Number of doses of second agent
+",,,number,,,,,,,,,,
+therapy_type,treatment_with_immunotherapy,,checkbox,"What therapies/medication are given concurrently with the current Immunotherapy","1, Targeted | 2, Chemotherapy | 3, Antibiotics | 4, Antiviral | 5, Antifungal | 6, Anti-emetic | 7, Non-oncologic medication, not otherwise specified | 8, Corticosteroids | 9, Other (non-medications)",,,,,,,,,,,," @HIDDEN"
+targeted_tx,treatment_with_immunotherapy,,text,"List out the targeted therapy drugs used",,"drugs seperated by (,)",,,,,"[therapy_type(1)] = '1'",,,,,," @HIDDEN"
+cheno_tx,treatment_with_immunotherapy,,text,"List out the chemotherapy drugs used",,"drugs seperated by (,)",,,,,"[therapy_type(2)] = '1'",,,,,," @HIDDEN"
+antibio_tx,treatment_with_immunotherapy,,text,"List out the antibiotic used",,"drugs seperated by (,)",,,,,"[therapy_type(3)] = '1'",,,,,," @HIDDEN"
+antiviral_tx,treatment_with_immunotherapy,,text,"List out the antiviral drugs used",,"drugs seperated by (,)",,,,,"[therapy_type(4)] = '1'",,,,,," @HIDDEN"
+antifungal_tx,treatment_with_immunotherapy,,text,"List out the antifungal drugs used",,"drugs seperated by (,)",,,,,"[therapy_type(5)] = '1'",,,,,," @HIDDEN"
+antiemetic_tx,treatment_with_immunotherapy,,text,"List out the anti-emetic drugs used",,"drugs seperated by (,)",,,,,"[therapy_type(6)] = '1'",,,,,," @HIDDEN"
+nom_tx,treatment_with_immunotherapy,,text,"List out Non Oncology Medication",,,,,,,"[therapy_type(7)] = '1'",,,,,," @HIDDEN"
+other_therapy,treatment_with_immunotherapy,,text,"If other, specify drug/s",,,,,,,"[therapy_type(9)] = '1'",,,,,," @HIDDEN"
+corticoster_tx,treatment_with_immunotherapy,,text,"List of the corticosteroids used",,,,,,,"[therapy_type(8)] = '1'",,,,,," @HIDDEN"
+progression_recist_yn,treatment_with_immunotherapy,,yesno,"Does this patient have disease progression as per RECIST?",,,,,,,,,LH,,,,
+progression_date,treatment_with_immunotherapy,,text,"Date of Progression",,"as per RECIST",date_mdy,,,,"[progression_recist_yn] = '1'",,,,,,
+pfs,treatment_with_immunotherapy,,text,"Progression Free Survival in months",,"per last radiology imaging date (CT, PET/MRI)",,,,,,,,,,," @HIDDEN"
+ttf_yn,treatment_with_immunotherapy,,yesno,"Does this patient have Time to Treatment Failure 
+ (TTF) information",,,,,,,,,,,,,
+ttf_date,treatment_with_immunotherapy,,text,"Date of Time to Treatment Failure",,"TTF date would be date of change of therapy or referral to hospice or death - which ever comes before",date_mdy,,,,"[ttf_yn] = '1'",,,,,,
+ttf,treatment_with_immunotherapy,,text,"Time to treatment failure in months",,,,,,,"[ttf_yn] = '1'",,,,,," @HIDDEN"
+ttf_noreason,treatment_with_immunotherapy,,checkbox,"Reason for TTF","1, Unable to access (as patient did not progress, or was lost to follow up) | 2, Switched the therapy | 3, Referral to hospice | 4, Death",,,,,,"[ttf_yn] = '1'",,,,,,
+do_followup,treatment_with_immunotherapy,,text,"Date of last follow up",,,date_mdy,,,,,,,,,,
+best_response,treatment_with_immunotherapy,,radio,"Best response as per investigator","1, Complete response (CR) | 2, Partial response (PR) | 3, Stable disease (SD) | 4, Progressive disease (PD) | 5, Not assessed",,,,,,,,,,,,
+best_response_date_inv,treatment_with_immunotherapy,,text,"Date of best response as per investigator",,,date_mdy,,,,"[best_response] = '1' and [best_response] = '2' and [best_response] = '3' and [best_response] = '4'",,LH,,,,
+best_response_recist,treatment_with_immunotherapy,,radio,"Best response as per RECIST","1, Complete response (CR) | 2, Partial response (PR) | 3, Stable disease (SD) | 4, Progressive disease (PD) | 5, Not assessed",,,,,,,,,,,,
+best_response_date_recist,treatment_with_immunotherapy,,text,"Date of best response as per RECIST",,,date_mdy,,,,"[best_response_recist] = '2' and [best_response_recist] = '3' and [best_response_recist] = '4' and [best_response_recist] = '1'",,LH,,,,
+current_treatment_adj_yn,treatment_with_immunotherapy,,yesno,"Is current treatment adjuvant?",,,,,,,,,,,,,
+tx_disc_yn,treatment_with_immunotherapy,,yesno,"Was IO treatment discontinued?",,,,,,,,,,,,,
+tx_disc_combo,treatment_with_immunotherapy,,text,"If only one IO agent was discontinued, please specify which one",,,,,,,"[tx_disc_yn] = '1' and ([io_agent1] = '10' OR [io_agent1] = '9' OR [io_agent1] = '11' OR [io_agent1] = '13' OR [io_agent1] = '14' OR [io_agent1] = '15')",,,,,,
+tx_disc_reason,treatment_with_immunotherapy,,radio,"Why was the treatment discontinued?","1, Disease progression or death | 2, Toxicity | 3, Completion of treatment | 4, Doctor's or patient's request",,,,,,"[tx_disc_yn] = '1'",,,,,,
+io_toxicity,io_toxicities_and_adverse_events,,yesno,"Did the patient experience any I-O toxicities?",,,,,,,,,,,,,
+oppr_infection,io_toxicities_and_adverse_events,,yesno,"Did the patient experience any opportunistic infection?",,,,,,,,,,,,,
+oppor_infec_yes,io_toxicities_and_adverse_events,,text,"Please explain",,,,,,,"[oppr_infection] = '1'",,,,,,
+systemic_steroids_use,io_toxicities_and_adverse_events,,yesno,"Were systemic steroids used for treatment of immune related adverse events? ",,,,,,,"[io_toxicity] = '1'",,,,,,
+io_toxicities,io_toxicities_and_adverse_events,,checkbox,"What adverse events was the patient diagnosed with between date of first dose and the date of the last dose","1, Colitis | 2, Hepatitis | 3, Skin rash | 4, Puritis | 5, Other skin toxicity | 6, Pneumonitis | 7, Hypothyroidism | 8, Hyperthyroidism | 9, Hypophysitis | 10, Endocrine toxicities | 11, Immune related joint pain or arthritis | 12, Immune related neurological toxicities | 13, Immune related hematological toxicity | 14, Musculoskeletal toxicity | 15, Nephrological toxicity | 17, Cardiac toxicity | 16, Other",,,,,,"[io_toxicity] = '1'",,,,,,
+doonset_colitis,io_toxicities_and_adverse_events,Colitis,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for colitis",,,,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued ",,,,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_resolution,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(1)] = '1'",,,,,,
+colitis_ster_dose,io_toxicities_and_adverse_events,,text,"Steroids Initial dose 
+",,"(mg/kg; or mg)",,,,,,,,,,," @HIDDEN"
+colitis_infliximab,io_toxicities_and_adverse_events,,yesno,"Was the patient given infliximab",,,,,,,,,,,,," @HIDDEN"
+colitis_relapse,io_toxicities_and_adverse_events,,yesno,"Relapse of colitis with continuation of immunotherapy",,,,,,,,,,,,," @HIDDEN"
+col_date_relapse,io_toxicities_and_adverse_events,,text,"Date of relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+colitis_res_rel,io_toxicities_and_adverse_events,,text,"Date of resolution after relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+colits_relap_tx,io_toxicities_and_adverse_events,,text,"Type of treatment",,,,,,,,,,,,," @HIDDEN"
+doonset_hepatitis,io_toxicities_and_adverse_events,Hepatitis,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for hepatitis",,,,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_ster_dose,io_toxicities_and_adverse_events,,text,"Steroids Initial dose",,"(mg/kg; or mg)",,,,,,,,,,," @HIDDEN"
+hepatitis_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_resolution,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(2)] = '1'",,,,,,
+hepatitis_relapse,io_toxicities_and_adverse_events,,yesno,"Relapse of hepatitis with continuation of immunotherapy",,,,,,,,,,,,," @HIDDEN"
+hep_date_relapse,io_toxicities_and_adverse_events,,text,"Date of relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+hepatitis_res_rel,io_toxicities_and_adverse_events,,text,"Date of resolution after relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+hepatitis_relap_tx,io_toxicities_and_adverse_events,,text,"Type of treatment",,,,,,,,,,,,," @HIDDEN"
+doonset_rash,io_toxicities_and_adverse_events,"Skin Rash",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(3)] = '1'",,,,,,
+rash_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for skin rash",,,,,,,"[io_toxicities(3)] = '1'",,,,,,
+rash_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(3)] = '1'",,,,,,
+hepatitis_othertx_2,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(3)] = '1'",,,,,,
+rash_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(3)] = '1'",,,,,,
+rash_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(3)] = '1'",,,,,,
+rash_resolution,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(3)] = '1'",,,,,,
+doonset_puritis,io_toxicities_and_adverse_events,Puritis,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(4)] = '1'",,,,,,
+puritis_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for puritis",,,,,,,"[io_toxicities(4)] = '1'",,,,,,
+puritis_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(4)] = '1'",,,,,,
+puritis_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(4)] = '1'",,,,,,
+puritis_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(4)] = '1'",,,,,,
+puritis_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(4)] = '1'",,,,,,
+puritis_resolution,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(4)] = '1'",,,,,,
+skintox_type,io_toxicities_and_adverse_events,"Skin Toxicity",text,"Type of skin toxicity",,,,,,,"[io_toxicities(5)] = '1'",,,,,,
+doonset_skintox,io_toxicities_and_adverse_events,,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_grade,io_toxicities_and_adverse_events,,text,"Grade of skin toxicity",,,,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_res,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_steroids,io_toxicities_and_adverse_events,,text,"Systemic Steroids Initial dose",,"(mg/kg; or mg)",,,,,,,,,,," @HIDDEN"
+skintox_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(5)] = '1'",,,,,,
+skintox_relapse,io_toxicities_and_adverse_events,,yesno,"Relapse of skin toxicity with continuation of immunotherapy",,,,,,,,,,,,," @HIDDEN"
+skintox_date_relapse,io_toxicities_and_adverse_events,,text,"Date of relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+skintox_rel_res,io_toxicities_and_adverse_events,,text,"Date of resolution after relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+skintox_txtype,io_toxicities_and_adverse_events,,text,"Type of treatment",,,,,,,,,,,,," @HIDDEN"
+doonset_pneum,io_toxicities_and_adverse_events,Pneumonitis,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for pneumonitis",,,,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_res,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_steroid_dose,io_toxicities_and_adverse_events,,text,"Steroids Initial dose ",,"(mg/kg; or mg)",,,,,,,,,,," @HIDDEN"
+pneum_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(6)] = '1'",,,,,,
+pneum_relapse,io_toxicities_and_adverse_events,,yesno,"Relapse of pneumonitis with continuation of immunotherapy",,,,,,,,,,,,," @HIDDEN"
+pneum_date_relapse,io_toxicities_and_adverse_events,,text,"Date of relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+pneum_rel_res,io_toxicities_and_adverse_events,,text,"Date of resolution after relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+pneum_txtype,io_toxicities_and_adverse_events,,text,"Type of treatment",,,,,,,,,,,,," @HIDDEN"
+doonset_hypothy,io_toxicities_and_adverse_events,Hypothyroidism,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(7)] = '1'",,,,,,
+hypothy_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for hypothyroidism",,,,,,,"[io_toxicities(7)] = '1'",,,,,,
+hypothy_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(7)] = '1'",,,,,,
+hypothy_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(7)] = '1'",,,,,,
+hypothy_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(7)] = '1'",,,,,,
+hypothy_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(7)] = '1'",,,,,,
+hypothy_res,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(7)] = '1'",,,,,,
+doonset_hyperthy,io_toxicities_and_adverse_events,Hyperthyroidism,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(8)] = '1'",,,,,,
+hyperthy_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for hyperthyroidism",,,,,,,"[io_toxicities(8)] = '1'",,,,,,
+hyperthy_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(8)] = '1'",,,,,,
+hyperthy_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(8)] = '1'",,,,,,
+hyperthy_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(8)] = '1'",,,,,,
+hyperthy_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(8)] = '1'",,,,,,
+hyperthy_res,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(8)] = '1'",,,,,,
+doonset_hypophy,io_toxicities_and_adverse_events,Hypophysitis,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(9)] = '1'",,,,,,
+hypophy_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity for hypophysitis",,,,,,,"[io_toxicities(9)] = '1'",,,,,,
+hypophy_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(9)] = '1'",,,,,,
+hypophy_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(9)] = '1'",,,,,,
+hypophy_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(9)] = '1'",,,,,,
+hypophy_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(9)] = '1'",,,,,,
+hypophy_res,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(9)] = '1'",,,,,,
+endo_toxtype,io_toxicities_and_adverse_events,"Endocrine Toxicities",text,"Type of Endocrine Toxicity ",,,,,,,"[io_toxicities(10)] = '1'",,,,,,
+endotox_grade,io_toxicities_and_adverse_events,,text,"Grade of endocrine toxicity",,,,,,,"[io_toxicities(10)] = '1'",,,,,,
+doonset_endo,io_toxicities_and_adverse_events,,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(10)] = '1'",,,,,,
+endo_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(10)] = '1'",,,,,,
+endo_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(10)] = '1'",,,,,,
+endo_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(10)] = '1'",,,,,,
+endo_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(10)] = '1'",,,,,,
+endo_res,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(10)] = '1'",,,,,,
+endo_afternumdose,io_toxicities_and_adverse_events,,text,"After number of doses",,,,,,,"[io_toxicities(10)] = '1'",,,,,," @HIDDEN"
+endo_rx,io_toxicities_and_adverse_events,,text,Rx,,,,,,,,,,,,," @HIDDEN"
+doonset_jointpain,io_toxicities_and_adverse_events,"Immune related joint pain or arthritis",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(11)] = '1'",,,,,,
+jointpain_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of joint paint or arthritis toxicity",,,,,,,"[io_toxicities(11)] = '1'",,,,,,
+jointpain_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(11)] = '1'",,,,,,
+jointpain_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(11)] = '1'",,,,,,
+jointpain_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(11)] = '1'",,,,,,
+jointpain_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(11)] = '1'",,,,,,
+jointpain_res,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(11)] = '1'",,,,,,
+neurotox_descrptn,io_toxicities_and_adverse_events,"Immune related neurological toxcitities",text,"Please describe the neurological toxicity",,,,,,,"[io_toxicities(12)] = '1'",,,,,,
+doonset_immneuro,io_toxicities_and_adverse_events,,text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(12)] = '1'",,,,,,
+immneuro_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of neurological toxicity",,,,,,,"[io_toxicities(12)] = '1'",,,,,,
+immneuro_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(12)] = '1'",,,,,,
+immneuro_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(12)] = '1'",,,,,,
+immneuro_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(12)] = '1'",,,,,,
+immneuro_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(12)] = '1'",,,,,,
+immneuro_res_2,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(12)] = '1'",,,,,,
+doonset_immhem,io_toxicities_and_adverse_events,"Immune related hematological toxicity",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(13)] = '1'",,,,,,
+immhem_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of hematological toxicity",,,,,,,"[io_toxicities(13)] = '1'",,,,,,
+immhem_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(13)] = '1'",,,,,,
+immhem_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(13)] = '1'",,,,,,
+immhem_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(13)] = '1'",,,,,,
+immhem_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(13)] = '1'",,,,,,
+immhem_res,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(13)] = '1'",,,,,,
+doonset_muscskel,io_toxicities_and_adverse_events,"Musculoskeletal Toxicity",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(14)] = '1'",,,,,,
+muscskel_toxicity_grade,io_toxicities_and_adverse_events,,text,"Grade of musculoskeletal toxicity",,,,,,,"[io_toxicities(14)] = '1'",,,,,,
+muscskel_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(14)] = '1'",,,,,,
+muscskel_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(14)] = '1'",,,,,,
+muscskel_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(14)] = '1'",,,,,,
+muscskel_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(14)] = '1'",,,,,,
+muscskel_res,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(14)] = '1'",,,,,,
+doonset_nephrotox,io_toxicities_and_adverse_events,"Nephrological Toxicity",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(15)] = '1'",,,,,,
+nephrotox_grade,io_toxicities_and_adverse_events,,text,"Grade of nephrological toxicity",,,,,,,"[io_toxicities(15)] = '1'",,,,,,
+nephrotox_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(15)] = '1'",,,,,,
+nephrotox_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(15)] = '1'",,,,,,
+nephrotox_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(15)] = '1'",,,,,,
+nephrotox_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(15)] = '1'",,,,,,
+nephrotox_res,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(15)] = '1'",,,,,,
+doonset_cardiactox,io_toxicities_and_adverse_events,"Cardiac Toxicity",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(17)] = '1'",,,,,,
+cardiactox_grade,io_toxicities_and_adverse_events,,text,"Grade of cardiac toxicity",,,,,,,"[io_toxicities(17)] = '1'",,,,,,
+cardiactox_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(17)] = '1'",,,,,,
+cardiactox_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(17)] = '1'",,,,,,
+cardiactox_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(17)] = '1'",,,,,,
+cardiactox_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms Resolved",,,,,,,"[io_toxicities(17)] = '1'",,,,,,
+cardiactox_res,io_toxicities_and_adverse_events,,text,"Date of Resolution",,,date_mdy,,,,"[io_toxicities(17)] = '1'",,,,,,
+doonset_other,io_toxicities_and_adverse_events,"Other toxicity",text,"Date of Onset",,,date_mdy,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_toxicity,io_toxicities_and_adverse_events,,text,"Grade of toxicity for other adverse event",,,,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_steroids_yn,io_toxicities_and_adverse_events,,yesno,"Steroids use",,,,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_resolution,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,"[io_toxicities(16)] = '1'",,,,,,
+other_dose_steroid,io_toxicities_and_adverse_events,,text,"Steroids Initial dose",,"(mg/kg; or mg)",,,,,,,,,,," @HIDDEN"
+other_relapse,io_toxicities_and_adverse_events,,yesno,"Relapse of adverse event with continuation of treatment ",,,,,,,,,,,,," @HIDDEN"
+other_date_relapse,io_toxicities_and_adverse_events,,text,"Date of relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+other_rel_res,io_toxicities_and_adverse_events,,text,"Date of resolution after relapse",,,date_mdy,,,,,,,,,," @HIDDEN"
+other_txtype,io_toxicities_and_adverse_events,,text,"Type of treatment",,,,,,,,,,,,," @HIDDEN"
+rechallenge,io_toxicities_and_adverse_events,,yesno,"Re- challenge with previous immunotherapy if   â‰¥ grade 3 toxicity and/or previous discontinuation of treatment  ",,,,,,,,,,,,," @HIDDEN"
+rechall_type,io_toxicities_and_adverse_events,,text,"Type of re-challenge",,,,,,,,,,,,," @HIDDEN"
+rechall_toxrecur,io_toxicities_and_adverse_events,,yesno,"Re-currence of previous toxicity",,,,,,,,,,,,," @HIDDEN"
+rechall_toxtype,io_toxicities_and_adverse_events,,text,"Type of Toxicity ",,,,,,,,,,,,," @HIDDEN"
+rechall_doonset,io_toxicities_and_adverse_events,,text,"Date of Onset",,,date_mdy,,,,,,,,,," @HIDDEN"
+rechall_res,io_toxicities_and_adverse_events,,text,"Date of resolution",,,date_mdy,,,,,,,,,," @HIDDEN"
+rechall_doses,io_toxicities_and_adverse_events,,text,"After number of doses",,,,,,,,,,,,," @HIDDEN"
+rechall_grade,io_toxicities_and_adverse_events,,text,"Grade of toxicity",,,,,,,,,,,,," @HIDDEN"
+rechall_steroid,io_toxicities_and_adverse_events,,text,"Steroids Initial dose ",,"(mg/kg; or mg)",,,,,,,,,,," @HIDDEN"
+rechall_othertx,io_toxicities_and_adverse_events,,text,"Any other agent used besides steroids for managements of toxicity?",,,,,,,,,,,,," @HIDDEN"
+rechall_symp,io_toxicities_and_adverse_events,,yesno,"Symptoms resolved",,,,,,,,,,,,," @HIDDEN"
+rechall_iodiscont,io_toxicities_and_adverse_events,,yesno,"Immunotherapy discontinued",,,,,,,,,,,,," @HIDDEN"
+rechall_recur_doses,io_toxicities_and_adverse_events,,text,"Number of doses",,,,,,,,,,,,," @HIDDEN"

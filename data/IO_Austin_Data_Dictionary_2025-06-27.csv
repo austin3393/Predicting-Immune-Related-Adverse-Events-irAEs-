@@ -1,0 +1,417 @@
+Variable / Field Name,Field Label,Candidate / No Candidate,Inclusion / Exclusion Criteria,Leak / No Leak,Date / No Date,Engineered / Not Engineered,Form Name,sub-category,Field Type
+age,Age from ICI Start,Candidate,No Criteria,No Leak,No Date,Engineered,,,
+aid_active,Is this patients autoimmune disease active?,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Other,yesno
+aid_hx,Does this patient have a history of autoimmune disease?,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Other,yesno
+aid_othertherapy,Mention Other therapies,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+aid_steroid_dose,Dose of steroids,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+aid_steroids,"If active, does this patient currently take steroids?",Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Other,yesno
+aid_type,Which autoimmune condition does this patient have?,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Other,checkbox
+alive,Is the patient alive?,No Candidate,No Criteria,Leak,No Date,Not Engineered,baseline_demographics,,yesno
+aml_subtype,AML subtype,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+antibio_tx,List out the antibiotic used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+antiemetic_tx,List out the anti-emetic drugs used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+antifungal_tx,List out the antifungal drugs used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+antiviral_tx,List out the antiviral drugs used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+asth_posteroid_dose,Specify dose of PO steroid,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+asth_posteroids,Is this patient on PO steroids?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,yesno
+asth_steroiddose,Specify the dose of the steroid,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+asth_steroidinhale,On inhaled steroids,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,yesno
+asth_steroidtypeinh,"If yes, specify type of steroid",Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+asth_steroidtypeoral,"If yes, specify type of steroid",Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,radio
+best_response,Best response as per investigator,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,radio
+best_response_date_inv,Date of best response as per investigator,No Candidate,No Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,,text
+best_response_date_recist,Date of best response as per RECIST,No Candidate,No Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,,text
+best_response_recist,Best response as per RECIST,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,radio
+brain_mets_location,Location,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+brain_mets_treated_before,Was any brain metastasis treated before beginning of I-O therapy?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+brainmets_baseline_ldh,Baseline LDH,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,text
+brainmets_baseline_ldh_uln,Upper limit of normal (ULN) of LDH,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,text
+brainmets_neuro_symptoms,"Neuro Symptoms - Headaches, weakness, or paresthesia",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+brainmets_new_prg_disc_io,Did the patient develop any new brain mets or his existing brain mets progressed after discontinuing I-O therapy?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+brainmets_tx_duringio_yn,Was there a new brain mets treated during I-O therapy?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+brainmets_tx_duringio_yn_2,Was there an additional brain mets treated during I-O therapy?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+brainmets_tx_duringio_yn_3,Was there an additional brain mets treated during I-O therapy?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+cardiactox_grade,Grade of cardiac toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+cardiactox_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+cardiactox_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+cardiactox_res,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+cardiactox_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+cardiactox_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+caris_nextgenseq,Caris next generation sequencing done,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+cci,Charlson Comorbidity Index,Candidate,No Criteria,No Leak,No Date,Engineered,,,
+cheno_tx,List out the chemotherapy drugs used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+chf_ef_postrx,Ejection Fraction at the Post-Rx,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+chf_ef_prerx,Ejection Fraction at the Pre-Rx,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+chf_stage,CHF NYHA Stage,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,radio
+chf_yesno,CHF,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,radio
+ckd_hemodialysis,Hemodialysis,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,yesno
+ckd_stage,CKD Stage,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,radio
+col_date_relapse,Date of relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+colitis_infliximab,Was the patient given infliximab,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+colitis_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+colitis_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+colitis_relapse,Relapse of colitis with continuation of immunotherapy,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+colitis_res_rel,Date of resolution after relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+colitis_resolution,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+colitis_ster_dose,"Steroids Initial dose 
+",No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+colitis_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+colitis_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+colitis_toxicity_grade,Grade of toxicity for colitis,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+colits_relap_tx,Type of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+comorbidities,Comorbidities,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Comorbidities,checkbox
+copd_posteroid_dose,Specify dose of PO steroid,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+copd_posteroids,Is this patient on PO steroids?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,yesno
+copd_steroiddose,Specify the dose of the steroid,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+copd_steroidinhale,Is the patient on inhaled steroids?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,yesno
+copd_steroidtypeinh,"If yes, specify type of inhaled steroid",No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+copd_steroidtypeoral,Specify type of PO steroid,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+corticoster_tx,List of the corticosteroids used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+county,County,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+current_io_line,Which line of therapy is the patient's current immunotherapy?,Candidate,Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Immunotherapy Treatment,radio
+current_rx_po_doses,What dose(s) of steroids did they get?,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+current_rx_po_streoids,Was the patient on steroids at the start of therapy?,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,yesno
+current_treatment_adj_yn,Is current treatment adjuvant?,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,yesno
+currentcancer,Current Cancer Diagnosis for which immunotherapy is being used,No Candidate,Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Current Cancer,radio
+date_brain_before_io,Date of MRI brain,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+date_brain_tx_rt_ck,Date of radiation cyber knife or steriostatic,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+date_brain_tx_rt_surgery,Date of surgery and radiation,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+date_brain_tx_rt_wbr,Date of whole brain radiation,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+date_brain_tx_surgery,Date of surgery,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+date_init_brain_met,Date of initial MRI when brain met was identified,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+date_mri_prg_disc_io,Date MRI suggesting progression or new lesions after discontinuing I-O therapy,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,yesno
+date_untx_brain_mets_mri,Date of MRI used to identify untreated brain mets status,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+diag_date_anx,Diagnosis date of anxiety disorder,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_asthma,Diagnosis date of asthma,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_cer_acc,Diagnosis Date of Cerebrovascular accident,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_chf,Diagnosis Date of Congestive Heart Failure,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_ckd,Diagnosis Date of Chronic Kidney Disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_cll_ssl,Diagnosis Date of CLL/SLL,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_copd,Diagnosis Date of COPD,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_ctd,Diagnosis Date of Connective tissue disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_dementia,Diagnosis Date of Dementia,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_depression,Diagnosis Date of Depression,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_diabetes_damage,Diagnosis Date of Diabetes with end-organ damage,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_diabetes_uncomp,Diagnosis Date of Diabetes uncomplicated,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_dvt_pe,Diagnosis Date of Deep Vein Thrombosis and Pulmonary Embolism,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_gerd,Diagnosis Date of GERD,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hemiplegia,Diagnosis Date of Hemiplegia,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hemodialysis,Diagnosis Date of Hemodialysis,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hepatitis_b,Diagnosis Date of Hepatitis B,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hepatitis_c,Diagnosis Date of Hepatitis C,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hiv,Diagnosis Date of HIV,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hyperlipidemia,Diagnosis Date of Hyperlipidemia,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_hypertension,Diagnosis Date of Hypertension,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_leukemia,Diagnosis Date of Leukemia,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_liver_mild,Diagnosis Date of Mild Liver Disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_liver_mod_severe,Diagnosis Date of Moderate and Severe Liver Disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_local_sld_tumr,Diagnosis Date of Localized solid tumor,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_lymphoma,Diagnosis Date of Lymphoma,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_met_sld_tumr,Diagnosis Date of Metastatic solid tumor,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_mi_cad,Diagnosis Date of Myocardial Infraction/Coronary Artery Disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_musculosk_pain,Diagnosis Date of Musculoskeletal pain,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_obesity,Diagnosis Date of Obesity,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_other,Diagnosis date of other comorbidity,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_pancreatitis,Diagnosis Date of Pancreatitis,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_peptic_ulcer,Diagnosis Date of Peptic ulcer disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_peri_neuropathy,Diagnosis Date of Peripheral Neuropathy,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+diag_date_peri_vascular,Diagnosis Date of Peripheral vascular disease,No Candidate,No Criteria,No Leak,Date,Not Engineered,medical_history,Comorbidities,text
+do_followup,Date of last follow up,No Candidate,Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,Immunotherapy Treatment,text
+dob,Date of Birth,Candidate,No Criteria,No Leak,Date,Not Engineered,baseline_demographics,Demographics,text
+dod,Date of Death,No Candidate,No Criteria,Leak,Date,Not Engineered,baseline_demographics,,text
+doonset_cardiactox,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_colitis,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_endo,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_hepatitis,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_hyperthy,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_hypophy,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_hypothy,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_immhem,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_immneuro,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_jointpain,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_muscskel,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_nephrotox,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_other,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_pneum,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_puritis,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_rash,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+doonset_skintox,Date of Onset,No Candidate,Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,text
+ecog_1stdose,ECOG pre treatment,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,radio
+ecog_lastdose,ECOG post treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,radio
+endo_afternumdose,After number of doses,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+endo_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+endo_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+endo_res,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+endo_rx,Rx,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+endo_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+endo_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+endo_toxtype,Type of Endocrine Toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+endotox_grade,Grade of endocrine toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+ethnicity,Ethnicity,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,Demographics,radio
+fam_hist_mem_cancer_1,Family member #1: Cancer history,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_cancer_2,Family member #2: Cancer history,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_cancer_3,Family member #3: Cancer history,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_cancer_4,Family member #4: Cancer history,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_cancerothr_1,Family member #1: Please specify which cancer,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+fam_hist_mem_cancerothr_2,Family member #2: Please specify which cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+fam_hist_mem_cancerothr_3,Family member #3: Please specify which cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+fam_hist_mem_cancerothr_4,Family member #4: Please specify which cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+fam_hist_mem_rel_1,Family member #1: Relationship,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_rel_2,Family member #2: Relationship,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_rel_3,Family member #3: Relationship,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+fam_hist_mem_rel_4,Family member #4: Relationship,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,dropdown
+first_birth_age,Age of patient at the time of the birth of her first child,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+first_io_other,"If other, please specify the drug name",Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+firstname,Patient First name,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+full_name,Patient Full Name,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+gender,Gender,Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,Demographics,radio
+gravida,Number of times this patient has been pregnant,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+height,Height,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+height_unit,Indicate the unit for height,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,dropdown
+hep_date_relapse,Date of relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hepatitis_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_othertx_2,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_relap_tx,Type of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_relapse,Relapse of hepatitis with continuation of immunotherapy,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hepatitis_res_rel,Date of resolution after relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_resolution,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_ster_dose,Steroids Initial dose,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hepatitis_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hepatitis_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hepatitis_toxicity_grade,Grade of toxicity for hepatitis,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hist_all,Specify the subtype of acute lymphoblastic leukemia,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_anal,"Specify the subtype of anal carcinoma 
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_bladder,"Specify the subtype of bladder cancer 
+
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_bone,Specify the subtype of bone cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_breast,Specify the subtype of breast cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_cns,Specify the subtype of central nervous system tumors,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_gi,Specify the subtype of GI cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_headneck,Specify the subtype of head and neck tumors,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_hodgkinlymph,Specify the subtype of hodgkin lymphoma,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_lung,"Specify the subtype of lung cancer 
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_melanoma,Specify the subtype of melanoma,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,checkbox
+hist_neuroendo,Specify the subtype of neuroendocrine tumors,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_nonhodgkin,Specify the subtype of Non-Hodgkin's lymphomas,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_nonmelanoma,"Specify the subtype of non-melanoma skin cancer 
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_softtiss_sarcoma,"Specify the subtype of soft tissue sarcoma 
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_tcell_lymph,"Specify the subtype of T cell lymphomas 
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_thyroid,Specify the subtype of thyroid cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hist_uterine,Specify the subtype of uterine neoplasms,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+hiv_cd4postrx,CD 4 Count Post-Rx or at progression,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+hiv_currenttx,Current treatment,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+hiv_postrx,HIV viral load Post-Rx,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+hiv_prerx,HIV viral load Pre-Rx,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+hive_cd4prerx,CD 4 Count Pre-Rx,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,,text
+hyperthy_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hyperthy_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hyperthy_res,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hyperthy_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hyperthy_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hyperthy_toxicity_grade,Grade of toxicity for hyperthyroidism,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hypophy_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hypophy_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hypophy_res,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hypophy_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hypophy_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hypophy_toxicity_grade,Grade of toxicity for hypophysitis,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hypothy_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hypothy_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hypothy_res,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+hypothy_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hypothy_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+hypothy_toxicity_grade,Grade of toxicity for hypothyroidism,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+ici_combination,ICI Combination Type,Candidate,No Criteria,No Leak,No Date,Engineered,,,
+ici_mechanism,ICI Mechanism Category,Candidate,No Criteria,No Leak,No Date,Engineered,,,
+immhem_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+immhem_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+immhem_res,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+immhem_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+immhem_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+immhem_toxicity_grade,Grade of hematological toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+immneuro_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+immneuro_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+immneuro_res_2,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+immneuro_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+immneuro_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+immneuro_toxicity_grade,Grade of neurological toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+institute,Institute,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,dropdown
+io_agent1,Current Immuno-therapy initial single or combination therapy,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,radio
+io_dose1date,Date of 1st dose,No Candidate,Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,Immunotherapy Treatment,text
+io_lastdosedate,Date of last dose of combination or initial single agent,No Candidate,Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,,text
+io_toxicities,What adverse events was the patient diagnosed with between date of first dose and the date of the last dose,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,checkbox
+io_toxicity,Did the patient experience any I-O toxicities?,Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,Toxicities and Adverse Events,yesno
+irae_onset,Date of First irAE Onset,No Candidate,Criteria,Leak,Date,Engineered,,,
+jointpain_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+jointpain_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+jointpain_res,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+jointpain_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+jointpain_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+jointpain_toxicity_grade,Grade of joint paint or arthritis toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+lastdosedate_2nd,Date of last dose of 2nd agent (maintenance) if initial treatment with COMBO,No Candidate,No Criteria,No Leak,Date,Not Engineered,treatment_with_immunotherapy,,text
+lastname,Patient Last Name,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+lymphoma_other,"Specify Lymphoma, Other",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,text
+met_iotx,Was metastatic disease present before IO therapy,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+metastasis,Metastasis,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,checkbox
+metastatic_sites,Total number of metastatic sites,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,radio
+miscarriages,Number of miscarriages,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,radio
+mrn,MRN,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+mrn_aria,Full MRN,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+msi_status,MicroSatellite Instability (MSI) status,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+multiple_primary,"If multiple, specify which cancers",Candidate,Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Current Cancer,text
+muscskel_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+muscskel_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+muscskel_res,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+muscskel_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+muscskel_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+muscskel_toxicity_grade,Grade of musculoskeletal toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+mut_alk,ALK,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+mut_braf,BRAF,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,radio
+mut_egfr,EGFR,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+mut_er,ER,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+mut_her2,HER2,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+mut_kras,KRAS,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+mut_nras,NRAS,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,radio
+mut_other,Other mutations this patient was tested for,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,text
+mut_pdl1,"If tested, report the percent of PD L -1 expression",Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,text
+mut_pr,PR,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+mut_ros,ROS,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+nephrotox_grade,Grade of nephrological toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+nephrotox_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+nephrotox_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+nephrotox_res,Date of Resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+nephrotox_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+nephrotox_symp,Symptoms Resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+neurotox_descrptn,Please describe the neurological toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+no_abortions,Number of abortions,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+nom_tx,List out Non Oncology Medication,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+num_brain_mets_before_io,Number of brain mets treated before I-O therapy,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,dropdown
+num_brain_mets_beg_io,"Total number of brain metastasis at the beginning of the I-O therapy (both treated and untreated)
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,text
+num_cancer_fam,How many members of  patient's family have a history of cancer?,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Other,radio
+numdoses_2ndagent,"Number of doses of second agent
+",No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+numofdoses,Number of doses,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,text
+onset_cancerreg,Onset date as per cancer registry,No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+onsetdate,Onset Date (biopsy date or radiology imaging which lead to treatment decision for I-O therapy),No Candidate,No Criteria,No Leak,Date,Not Engineered,current_cancer_hx,,text
+oppor_infec_yes,Please explain,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+oppr_infection,Did the patient experience any opportunistic infection?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+other_cancer,"If other, specify the current cancer diagnosis",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,text
+other_cancersubtype,"Is other, please specify the cancer subtype",Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,text
+other_comorb,"If other, specify the comorbidity",No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Other,text
+other_date_relapse,Date of relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+other_dose_steroid,Steroids Initial dose,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+other_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+other_metastasis,"If other, please specify",No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,text
+other_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+other_rel_res,Date of resolution after relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+other_relapse,Relapse of adverse event with continuation of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+other_resolution,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+other_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+other_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+other_therapy,"If other, specify drug/s",No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+other_toxicity,Grade of toxicity for other adverse event,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+other_txtype,Type of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+packs_per_day,Number of packs smoked per day,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+para,Number of times this patient has successfully delivered a live baby,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+pdli_test,Test used to check PD L -1 expression,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+pfs,Progression Free Survival in months,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+pneum_date_relapse,Date of relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+pneum_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+pneum_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+pneum_rel_res,Date of resolution after relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+pneum_relapse,Relapse of pneumonitis with continuation of immunotherapy,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+pneum_res,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+pneum_steroid_dose,Steroids Initial dose,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+pneum_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+pneum_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+pneum_toxicity_grade,Grade of toxicity for pneumonitis,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+pneum_txtype,Type of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+post_bmi,Post treatment BMI,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+pre_bmi,Pre treatment BMI,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,text
+pre_bmi_calculated,Pre treatment BMI,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,calc
+pre_bsa_calculated,Pre treatment BSA,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,calc
+prev_cancer_history_other,Please specify which other cancer,No Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Cancer History,text
+prev_cancer_hx,Does this patient have previous history of cancer prior to the current cancer that IO is given for?,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Cancer History,yesno
+prev_cancer_hx_type,Please specify what history of cancer type this patient had,Candidate,No Criteria,No Leak,No Date,Not Engineered,medical_history,Cancer History,checkbox
+prev_io_agent,Previous Immuno-therapy initial single or combination therapy,No Candidate,Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,radio
+prevrx_io_therapy,Was the patient previously treated with an Immuno-therapy?,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,Immunotherapy Treatment,yesno
+prevrx_io_therapynumber,"Number of previous Immuno-therapies  before current Immuno-therapy?
+",Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,radio
+progression_date,Date of Progression,No Candidate,No Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,Other,text
+progression_recist_yn,Does this patient have disease progression as per RECIST?,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,Other,yesno
+puritis_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+puritis_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+puritis_resolution,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+puritis_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+puritis_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+puritis_toxicity_grade,Grade of toxicity for puritis,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+race,Race,Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,Demographics,radio
+rash_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rash_resolution,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rash_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rash_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rash_toxicity_grade,Grade of toxicity for skin rash,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_doonset,Date of Onset,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_doses,After number of doses,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_grade,Grade of toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rechall_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_recur_doses,Number of doses,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_res,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_steroid,Steroids Initial dose,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rechall_toxrecur,Re-currence of previous toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rechall_toxtype,Type of Toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechall_type,Type of re-challenge,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+rechallenge,Re- challenge with previous immunotherapy if   â‰¥ grade 3 toxicity and/or previous discontinuation of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+rt_necrosis_bevacizumab_yn,Was Bevacizumab used?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+rt_necrosis_streoids_yn,Were steroids used?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+rt_necrosis_yn,Radiation Necrosis,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+skintox_date_relapse,Date of relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_grade,Grade of skin toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_iodiscont,Immunotherapy discontinued,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+skintox_othertx,Any other agent used besides steroids for managements of toxicity?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_rel_res,Date of resolution after relapse,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_relapse,Relapse of skin toxicity with continuation of immunotherapy,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+skintox_res,Date of resolution,No Candidate,No Criteria,Leak,Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_steroids,Systemic Steroids Initial dose,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_steroids_yn,Steroids use,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+skintox_symp,Symptoms resolved,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+skintox_txtype,Type of treatment,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+skintox_type,Type of skin toxicity,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,text
+smoke_yrs_quit,How many years has it been since patient quit?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+smoking_hist,Smoking History,Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,Behavioral History,radio
+stage,Cancer stage at which the patient is receiving treatment,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,radio
+state,State,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,text
+stillbirths,Number of stillbirths,No Candidate,No Criteria,No Leak,No Date,Not Engineered,baseline_demographics,,radio
+systemic_steroids_use,Were systemic steroids used for treatment of immune related adverse events?,No Candidate,No Criteria,Leak,No Date,Not Engineered,io_toxicities_and_adverse_events,,yesno
+targeted_tx,List out the targeted therapy drugs used,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+test_pdl1,Was PD-L1 tested in this patient?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,Other,radio
+therapy_type,What therapies/medication are given concurrently with the current Immunotherapy,Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,checkbox
+ttf,Time to treatment failure in months,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+ttf_date,Date of Time to Treatment Failure,No Candidate,No Criteria,Leak,Date,Not Engineered,treatment_with_immunotherapy,,text
+ttf_noreason,Reason for TTF,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,checkbox
+ttf_yn,"Does this patient have Time to Treatment Failure 
+ (TTF) information",No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,yesno
+tx_disc_combo,"If only one IO agent was discontinued, please specify which one",No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+tx_disc_reason,Why was the treatment discontinued?,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,radio
+tx_disc_yn,Was IO treatment discontinued?,No Candidate,No Criteria,Leak,No Date,Not Engineered,treatment_with_immunotherapy,,yesno
+type_tx_brain_mets,Type of treatments of brain mets,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+typtx_brainmets_during_io,Type of treatments of brain mets,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+typtx_brainmets_during_io_2,Type of treatments of brain mets,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+typtx_brainmets_during_io_3,Type of treatments of brain mets,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+unreseactable_yn,Does the patient have unresectable disease?,Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+untx_brain_mets_prg_type,Untreated brain mets progression or new lesions,No Candidate,No Criteria,Leak,No Date,Not Engineered,current_cancer_hx,,checkbox
+untx_brain_mets_prg_yn,Did the untreated brain mets progress or new lesions develop (during I-O therapy)?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+untx_brain_mets_status,Did the untreated brain mets ....?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,radio
+untx_brain_mets_yn,Were there any untreated brain mets present at beginning of I-O therapy?,No Candidate,No Criteria,No Leak,No Date,Not Engineered,current_cancer_hx,,yesno
+weight,Weight before first dose,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,text
+weight_unit,Indicate the unit for weight,No Candidate,No Criteria,No Leak,No Date,Not Engineered,treatment_with_immunotherapy,,dropdown
